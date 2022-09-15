@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    display: flex; /* modifica as caixas (li) dentro da ul, colocando elas em inline, sem modificar a propriedade da ul */
+    gap: 16px; /* adiciona um espaçamento entre as caixas */
+}
+
+.gamesList img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+#imgGau {
+    width: 90px;
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center; /* posiciona imagem */
+    background-size: 100% auto; /* ocupa 100% da largura da página, e ocupa o tamanho total da imagem com o auto */
+    background-repeat: no-repeat; /* cancela a repetição de imagem */
+    background-color: #121214;  /* deixa o fundo roxo */
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+main * {
+    border: 1px solid red;
+}
+
+main {
+    max-width: 580px; /* só vai ocupar uma largura de 580px */
+    width: 90%; /* faz com que a main ocupe 90% da página */
+    margin: auto;
+}
+
+section {
+    color: white;
+}
+
+section h2 {
+    letter-spacing: -0.47px; /* espaço entre as letras */
+}
+
+section p {
+    letter-spacing: -0.18px; /* espaço entre as letras */
+    color: #A1A1AA;
+}
