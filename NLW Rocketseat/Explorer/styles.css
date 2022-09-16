@@ -2,21 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} /* reseta o css da página */
 
-ul {
+section ul {
     list-style: none;
     display: flex; /* modifica as caixas (li) dentro da ul, colocando elas em inline, sem modificar a propriedade da ul */
+    flex-wrap: wrap; /* joga os blocos para baixo quando chegar no limite da borda */
     gap: 16px; /* adiciona um espaçamento entre as caixas */
+    margin-top: 24px; /* adiciona uma margem de 24px do topo */
 }
 
 .gamesList img {
-    width: 90px;
-    border-radius: 8px;
+    border-radius: 8px; /* arredonda a borda */
+    width: 90px; /* coloca a largura das imagens em 90px */
 }
 
-#imgGau {
-    width: 90px;
+.channelList img {
+    border-radius: 50px; /* arredonda a borda */
+    width: 70px; /* coloca a largura das imagens em 70px */
 }
 
 body {
@@ -32,18 +35,41 @@ body * {
     line-height: 160%;
 }
 
-main * {
-    border: 1px solid red;
+div img {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding: 3px;
+    width: 120px;
+    border-radius: 50%;
 }
+
+/* main * {
+    border: 1px solid red;
+} */
 
 main {
     max-width: 580px; /* só vai ocupar uma largura de 580px */
     width: 90%; /* faz com que a main ocupe 90% da página */
     margin: auto;
+
+    /* definir o espaço entre as caixas */
+
+    /* display: flex; coloca todos os elementos dentro de main, um ao lado do outro 
+    flex-direction: column; coloca os elementos em coluna novamente*/
+
+    /* display: grid;
+    gap: 24px; */
+    display: grid; /* define como o elemento será mostrado na tela */
+    gap: 24px; /* dá o espaçamento entre os blocos; */
+
+    margin-top: 32px;
+
 }
 
 section {
     color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px; /* preenche para cima */
+    border-radius: 10px;
 }
 
 section h2 {
@@ -53,4 +79,29 @@ section h2 {
 section p {
     letter-spacing: -0.18px; /* espaço entre as letras */
     color: #A1A1AA;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px; /* mexe no espaçamento interno do bloco */
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+/* footer {
+    width: 100%;
+    text-align: center;
+    height: 4   0px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+#header {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    width: 100%;
 }
