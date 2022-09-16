@@ -35,11 +35,15 @@ body * {
     line-height: 160%;
 }
 
-div img {
+header div{
+    width: 120px;
+}
+
+header img{
+    width: 100%;
+    border-radius: 50%;
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     padding: 3px;
-    width: 120px;
-    border-radius: 50%;
 }
 
 /* main * {
@@ -49,7 +53,7 @@ div img {
 main {
     max-width: 580px; /* só vai ocupar uma largura de 580px */
     width: 90%; /* faz com que a main ocupe 90% da página */
-    margin: auto;
+    margin: 32px auto;
 
     /* definir o espaço entre as caixas */
 
@@ -60,9 +64,6 @@ main {
     gap: 24px; */
     display: grid; /* define como o elemento será mostrado na tela */
     gap: 24px; /* dá o espaçamento entre os blocos; */
-
-    margin-top: 32px;
-
 }
 
 section {
@@ -99,9 +100,7 @@ section div {
     justify-content: center;
 } */
 
-#header {
-    display: flex;
-    justify-content: center;
-    padding: 32px;
-    width: 100%;
+header {
+    margin-top: 32px;
+    text-align: center;
 }
