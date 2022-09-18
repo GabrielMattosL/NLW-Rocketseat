@@ -12,6 +12,14 @@ section ul {
     margin-top: 24px; /* adiciona uma margem de 24px do topo */
 }
 
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
 .gamesList img {
     border-radius: 8px; /* arredonda a borda */
     width: 90px; /* coloca a largura das imagens em 90px */
@@ -20,6 +28,7 @@ section ul {
 .channelList img {
     border-radius: 50px; /* arredonda a borda */
     width: 70px; /* coloca a largura das imagens em 70px */
+    border: 1px solid #443E54;
 }
 
 body {
@@ -35,15 +44,29 @@ body * {
     line-height: 160%;
 }
 
-header div{
-    width: 120px;
+header {
+    margin-top: 32px;
+    /* text-align: center; usamos o text align center pois a imagem é reconhecida como texto*/
+    height: 120px;
 }
 
-header img{
-    width: 100%;
-    border-radius: 50%;
+header div:hover {
+    transform: scale(1.1);
+}
+
+header div {
+    width: 120px;
+    margin: auto;
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
-    padding: 3px;
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+}
+
+header div img{
+    width: 100%; /* em relação a div */
+    border-radius: 50%;
 }
 
 /* main * {
@@ -53,7 +76,7 @@ header img{
 main {
     max-width: 580px; /* só vai ocupar uma largura de 580px */
     width: 90%; /* faz com que a main ocupe 90% da página */
-    margin: 32px auto;
+    margin: 32px auto; /* 32 pra cima e pra baixo preenchimento automatico */
 
     /* definir o espaço entre as caixas */
 
@@ -100,7 +123,52 @@ section div {
     justify-content: center;
 } */
 
-header {
-    margin-top: 32px;
-    text-align: center;
+#codeImg {
+    width: 32px;
+}
+
+/* animation */
+
+header div {
+    animation: fromTop .7s .2s backwards; /*  trás as propriedades das animações para ele antes de executar, deixando-o previamente pronto */
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: .2s;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .6s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 2;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 2;
+        transform: translateX(0);
+    }
 }
